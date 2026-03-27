@@ -48,6 +48,39 @@ office-forge/
 └── config/                    # Environment and credential setup
 ```
 
+## Recurring Tasks (/loop)
+
+The `/loop` command in Claude Code runs a task on a schedule — no cron setup, no scripts, no infrastructure. Just describe what to do and how often.
+
+```bash
+# In any office-forge managed project, open CC and run:
+/loop 30m check invoices/ for new files and log payment status
+/loop 1h summarize new correspondence and flag action items
+/loop 4h generate daily financial summary from accounting data
+/loop 1d scan contracts/ for upcoming renewal dates and alert
+/loop 1w generate weekly client status report and save to reports/
+```
+
+This is the core differentiator: **deterministic recurring office tasks via a single command**, without external schedulers or automation platforms.
+
+Practical patterns:
+
+| Frequency | Task | Skill |
+|-----------|------|-------|
+| Every 30m | Check invoices folder for new files | `invoice-processing` |
+| Every 1h | Flag urgent emails and draft responses | `email-triage` |
+| Every 4h | Generate financial summary | `financial-report` |
+| Daily | Organize new documents by date | `doc-organize` |
+| Weekly | Compile client status report | `financial-report` |
+
+Start a loop session in any project:
+
+```bash
+cd projects/client-acme/ && claude
+# Then in CC:
+/loop 1h check correspondence/ for client messages and summarize action items
+```
+
 ## Skills (Deterministic Workflows)
 
 Skills in `.claude/skills/` define **repeatable, deterministic tasks** that CC executes consistently:

@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "crm": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-hubspot"],
+      "env": {
+        "HUBSPOT_API_KEY": "${HUBSPOT_API_KEY}"
+      }
+    },
+    "accounting": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-quickbooks"],
+      "env": {
+        "QB_CLIENT_ID": "${QB_CLIENT_ID}",
+        "QB_CLIENT_SECRET": "${QB_CLIENT_SECRET}",
+        "QB_REALM_ID": "${QB_REALM_ID}"
+      }
+    },
+    "documents": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "env": {}
+    }
+  }
+}

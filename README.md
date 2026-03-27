@@ -93,4 +93,4 @@ Based on research in [ai-agents-research](https://github.com/qte77/ai-agents-res
 
 ## License
 
-MIT
+Apache-2.0

@@ -18,6 +18,18 @@ Then add the new project path to `projects.conf`.
 
 | Template | Contents | Use Case |
 |----------|----------|----------|
-| `client-engagement/` | Contracts, invoices, correspondence folders + CRM MCP | New client projects |
+| `client-engagement/` | Contracts, invoices, correspondence, reports + CRM/accounting/documents MCP + CLAUDE.md | New client projects |
 | `quarterly-close/` | Financial folders + accounting MCP + report skill | Recurring financial close |
 | `hiring-pipeline/` | Candidates, offers, onboarding folders + HR skill | Open positions |
+
+## client-engagement
+
+Includes pre-configured `/loop` patterns for recurring client tasks:
+
+```
+/loop 30m check invoices/ for new files and update payment log
+/loop 1h scan correspondence/ for unresolved action items
+/loop 4h draft weekly status report for client
+```
+
+See [client-engagement/README.md](client-engagement/README.md) for full setup instructions.

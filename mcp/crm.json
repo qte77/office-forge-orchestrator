@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "hubspot": {
+      "type": "stdio",
+      "command": "hs",
+      "args": ["mcp", "start"],
+      "env": {
+        "HUBSPOT_PORTAL_ID": "${HUBSPOT_PORTAL_ID}"
+      }
+    },
+    "salesforce": {
+      "type": "http",
+      "url": "${COMPOSIO_MCP_URL}",
+      "headers": {
+        "X-API-Key": "${COMPOSIO_API_KEY}"
+      }
+    }
+  }
+}

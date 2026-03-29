@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "stripe": {
+      "type": "http",
+      "url": "https://mcp.stripe.com",
+      "env": {
+        "STRIPE_API_KEY": "${STRIPE_API_KEY}"
+      }
+    },
+    "xero": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@xeroapi/xero-mcp-server"],
+      "env": {
+        "XERO_CLIENT_ID": "${XERO_CLIENT_ID}",
+        "XERO_CLIENT_SECRET": "${XERO_CLIENT_SECRET}"
+      }
+    },
+    "quickbooks": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "quickbooks-mcp"],
+      "env": {
+        "QB_CLIENT_ID": "${QB_CLIENT_ID}",
+        "QB_CLIENT_SECRET": "${QB_CLIENT_SECRET}",
+        "QB_REALM_ID": "${QB_REALM_ID}"
+      }
+    },
+    "freshbooks": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "freshbooks-mcp"],
+      "env": {
+        "FRESHBOOKS_CLIENT_ID": "${FRESHBOOKS_CLIENT_ID}",
+        "FRESHBOOKS_CLIENT_SECRET": "${FRESHBOOKS_CLIENT_SECRET}"
+      }
+    }
+  }
+}

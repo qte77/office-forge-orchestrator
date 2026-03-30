@@ -1,10 +1,9 @@
-# office-forge
+# office-forge-orchestrator
 
-Manage office projects, files, and tasks with AI agents. See `README.md` for usage.
+Orchestrate parallel AI agents across office projects. See `README.md` for usage.
 
-- `projects.conf` lists managed project directories
-- `scripts/` manage sessions, status, and execution across projects
-- `.claude/skills/` provide deterministic office task skills
-- `mcp/` defines business API MCP server configs
-- `templates/` provide project scaffolds for common scenarios
-- `config/` handles auth and environment
+Scripts in `scripts/` manage all projects listed in `config/projects.conf` (single source of truth).
+Config in `config/` handles project list, environment, and credential setup.
+Skills in `.claude/skills/` provide deterministic office task workflows.
+MCP configs in `mcp/` define business API server connections.
+Templates in `templates/` scaffold common project types.

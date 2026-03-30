@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <style>
+      /* Light mode (default) */
+      .bg { fill: #ffffff; }
+      .border { fill: #e0e0e0; }
+      .heading { fill: #333333; }
+      .subtext { fill: #666666; }
+      .box-fill { fill: #f5f5f5; }
+      .box-stroke { stroke: #d0d0d0; fill: none; }
+      .accent { fill: #0451a5; }
+      .accent-line { stroke: #0451a5; }
+      .ok { fill: #008000; }
+      .arrow-line { stroke: #b08c35; }
+      .arrow-head { fill: #b08c35; }
+      .label { fill: #333333; }
+      .icon-fill { fill: #0451a5; }
+      .bar { fill: #007acc; }
+      .bar-text { fill: #ffffff; }
+
+      /* Dark mode */
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #1e1e1e; }
+        .border { fill: #3c3c3c; }
+        .heading { fill: #cccccc; }
+        .subtext { fill: #999999; }
+        .box-fill { fill: #252526; }
+        .box-stroke { stroke: #3c3c3c; }
+        .accent { fill: #569cd6; }
+        .accent-line { stroke: #569cd6; }
+        .ok { fill: #6a9955; }
+        .arrow-line { stroke: #e8ab53; }
+        .arrow-head { fill: #e8ab53; }
+        .label { fill: #d4d4d4; }
+        .icon-fill { fill: #569cd6; }
+        .bar { fill: #007acc; }
+        .bar-text { fill: #ffffff; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="400" rx="8" class="bg"/>
+
+  <!-- Title -->
+  <text x="360" y="36" text-anchor="middle" class="heading" font-size="18" font-weight="600">office-forge-orchestrator</text>
+  <text x="360" y="56" text-anchor="middle" class="subtext" font-size="12">Orchestrate parallel AI agents across office projects</text>
+
+  <!-- Central orchestrator box (briefcase icon) -->
+  <rect x="280" y="74" width="160" height="80" rx="6" class="box-fill"/>
+  <rect x="280" y="74" width="160" height="80" rx="6" class="box-stroke" stroke-width="2"/>
+  <!-- Briefcase icon -->
+  <rect x="338" y="86" width="44" height="32" rx="4" class="icon-fill" opacity="0.15"/>
+  <rect x="338" y="86" width="44" height="32" rx="4" stroke-width="2" fill="none" class="accent-line"/>
+  <rect x="352" y="80" width="16" height="10" rx="3" fill="none" class="accent-line" stroke-width="2"/>
+  <line x1="338" y1="100" x2="382" y2="100" class="accent-line" stroke-width="1.5"/>
+  <text x="360" y="136" text-anchor="middle" class="accent" font-size="11" font-weight="600">config/projects.conf</text>
+
+  <!-- Arrows from orchestrator to projects -->
+  <line x1="310" y1="154" x2="120" y2="200" class="arrow-line" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="360" y1="154" x2="360" y2="200" class="arrow-line" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="410" y1="154" x2="600" y2="200" class="arrow-line" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Arrow heads -->
+  <polygon points="117,196 127,196 120,204" class="arrow-head"/>
+  <polygon points="356,196 364,196 360,204" class="arrow-head"/>
+  <polygon points="597,196 607,196 600,204" class="arrow-head"/>
+
+  <!-- Project box 1: Accounting -->
+  <rect x="40" y="206" width="160" height="100" rx="6" class="box-fill"/>
+  <rect x="40" y="206" width="160" height="100" rx="6" class="box-stroke" stroke-width="1.5"/>
+  <text x="120" y="228" text-anchor="middle" class="accent" font-size="12" font-weight="600">Accounting</text>
+  <text x="56" y="250" class="ok" font-size="10">&#x2714; invoice-processing</text>
+  <text x="56" y="266" class="ok" font-size="10">&#x2714; financial-report</text>
+  <text x="56" y="282" class="subtext" font-size="10">&#x25B6; quarterly close</text>
+  <text x="56" y="298" class="subtext" font-size="9" font-style="italic">MCP: accounting-api</text>
+
+  <!-- Project box 2: Client Work -->
+  <rect x="280" y="206" width="160" height="100" rx="6" class="box-fill"/>
+  <rect x="280" y="206" width="160" height="100" rx="6" class="box-stroke" stroke-width="1.5"/>
+  <text x="360" y="228" text-anchor="middle" class="accent" font-size="12" font-weight="600">Client Projects</text>
+  <text x="296" y="250" class="ok" font-size="10">&#x2714; offer-generation</text>
+  <text x="296" y="266" class="ok" font-size="10">&#x2714; doc-organize</text>
+  <text x="296" y="282" class="subtext" font-size="10">&#x25B6; contract renewal</text>
+  <text x="296" y="298" class="subtext" font-size="9" font-style="italic">MCP: crm-api</text>
+
+  <!-- Project box 3: Communications -->
+  <rect x="520" y="206" width="160" height="100" rx="6" class="box-fill"/>
+  <rect x="520" y="206" width="160" height="100" rx="6" class="box-stroke" stroke-width="1.5"/>
+  <text x="600" y="228" text-anchor="middle" class="accent" font-size="12" font-weight="600">Communications</text>
+  <text x="536" y="250" class="ok" font-size="10">&#x2714; email-triage</text>
+  <text x="536" y="266" class="ok" font-size="10">&#x2714; draft responses</text>
+  <text x="536" y="282" class="subtext" font-size="10">&#x25B6; weekly digest</text>
+  <text x="536" y="298" class="subtext" font-size="9" font-style="italic">MCP: email-api</text>
+
+  <!-- Bottom bar: parallel sessions -->
+  <rect x="40" y="330" width="640" height="44" rx="4" class="bar"/>
+  <text x="360" y="348" text-anchor="middle" class="bar-text" font-size="11" font-weight="600">Parallel Claude Code Sessions</text>
+  <text x="360" y="364" text-anchor="middle" class="bar-text" font-size="10" opacity="0.85">./scripts/sessions.sh — one agent per project</text>
+
+  <!-- Footer -->
+  <text x="360" y="394" text-anchor="middle" class="subtext" font-size="10">Skills + MCP servers + project config = deterministic office automation</text>
+</svg>

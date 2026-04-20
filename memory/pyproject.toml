@@ -1,0 +1,41 @@
+[project]
+name = "doc-memory"
+version = "0.1.0"
+description = "Document RAG: parse → tree index → chunk → embed → hybrid retrieval"
+authors = [
+    {name = "qte77", email = "qte@77.gh"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "sentence-transformers>=3.0",
+    "faiss-cpu>=1.9",
+]
+
+[project.optional-dependencies]
+docling = ["docling>=2.0"]
+markitdown = ["markitdown>=0.1"]
+
+[project.scripts]
+doc-memory = "doc_memory.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/doc_memory"]

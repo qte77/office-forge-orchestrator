@@ -1,6 +1,6 @@
 .SILENT:
 .ONESHELL:
-.PHONY: help setup_all generate_tasks start_workspace
+.PHONY: help setup_all setup_gh_auth generate_tasks start_workspace
 .DEFAULT_GOAL := help
 
 
@@ -8,6 +8,12 @@
 
 
 setup_all: generate_tasks start_workspace  ## Run full setup (generate tasks, open workspace)
+
+setup_gh_auth:  ## Configure gh as git credential helper + durable GPG signing config
+	if command -v gh > /dev/null 2>&1; then gh auth setup-git; \
+	else echo "gh cli not installed. skipping auth."; fi
+	git config --global commit.gpgsign true
+	git config --global gpg.format openpgp
 
 
 # MARK: WORKSPACE

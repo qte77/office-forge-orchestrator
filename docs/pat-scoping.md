@@ -85,8 +85,9 @@ credentials carry the same compromise blast radius as a Git PAT.
   - Suspected compromise (logs show unauthorized actions)
   - Codespace recovered from a public branch
   - Departure of any operator who held the PAT
-  - **MCP credential exposure** — rotate the PAT *and* the MCP server
-    credential as a pair when either is suspected compromised
+  - **Business-API credential exposure** — rotate the PAT *and* the
+    affected business-API credential (Stripe, HubSpot, Xero, etc.) as
+    a pair when either is suspected compromised
 - **Document rotations** in the repo's CHANGELOG or a private notes
   channel — not in a commit, never in code
 

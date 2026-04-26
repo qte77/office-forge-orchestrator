@@ -70,9 +70,10 @@ exists or scope expands:
 
 - **Devcontainer lifecycle** (`onCreateCommand`, `postAttachCommand`)
 - **Rebuild / Management** (`gh codespace rebuild|list|stop|ssh|delete`)
-- **Secrets** (Codespaces user-secret scoping for `GH_PAT` and MCP
-  credentials)
+- **Secrets** (Codespaces user-secret scoping for `GH_PAT` and
+  business-API credentials consumed by the MCP servers)
 - **Token scopes** (capability table for `GITHUB_TOKEN` vs `GH_PAT`)
-- **MCP credential injection** (the env vars referenced by `mcp/*.json`
-  configs — accounting, CRM, documents)
+- **Business-API credential injection** (the env vars referenced by
+  `mcp/*.json` configs — Stripe, HubSpot, Xero, QuickBooks,
+  FreshBooks, Google Workspace, Composio)
 - **Ports and Forwarding**

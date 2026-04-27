@@ -36,14 +36,14 @@ Deterministic pipeline: scan documents → extract fields → validate → write
 
 ## Input Contract
 
-```
+```text
 $SOURCE_DIR/
   *.pdf | *.png | *.jpg | *.jpeg   — invoice/receipt files
 ```
 
 ## Output Contract
 
-```
+```text
 $OUTPUT_FILE.xlsx    — populated spreadsheet, sorted by date
 stdout               — summary: N docs processed, N flagged, totals by currency
 ```

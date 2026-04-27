@@ -29,7 +29,7 @@ Load these skills from the office-forge `.claude/skills/` directory:
 
 ## Recurring Tasks
 
-```
+```text
 /loop 30m check invoices/ for new files and update payment log
 /loop 1h scan correspondence/ for unresolved action items
 /loop 4h draft weekly status report for client

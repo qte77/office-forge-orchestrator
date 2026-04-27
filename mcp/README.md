@@ -4,7 +4,7 @@ Pre-configured MCP server definitions for business APIs. Copy relevant configs t
 
 ```bash
 ../scripts/mcp-setup.sh   # Interactive setup
-```
+```text
 
 ## Available Configs
 

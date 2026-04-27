@@ -14,7 +14,7 @@ echo "/home/user/office/client-acme" >> projects.conf
 
 # Start CC in the engagement context
 cd ~/office/client-acme/ && claude
-```
+```text
 
 ## Folder Structure
 
@@ -27,7 +27,7 @@ client-engagement/
 ├── invoices/              # Issued invoices and payment records
 ├── correspondence/        # Emails, meeting notes, client comms
 └── reports/               # Deliverables, status reports, analyses
-```
+```text
 
 ## MCP Servers Included
 
@@ -45,7 +45,7 @@ Once CC is open in this project, use `/loop` for automatic recurring tasks:
 /loop 30m check invoices/ for new files and log payment status
 /loop 1h summarize new correspondence and flag action items
 /loop 4h generate client status report from reports/ folder
-```
+```text
 
 ## Getting Started
 

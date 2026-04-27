@@ -10,7 +10,7 @@ cp -r templates/client-engagement/ ~/office/client-acme/
 
 # Create a quarterly close project
 cp -r templates/quarterly-close/ ~/office/q1-2026-close/
-```
+```text
 
 Then add the new project path to `projects.conf`.
 
@@ -30,6 +30,6 @@ Includes pre-configured `/loop` patterns for recurring client tasks:
 /loop 30m check invoices/ for new files and update payment log
 /loop 1h scan correspondence/ for unresolved action items
 /loop 4h draft weekly status report for client
-```
+```text
 
 See [client-engagement/README.md](client-engagement/README.md) for full setup instructions.

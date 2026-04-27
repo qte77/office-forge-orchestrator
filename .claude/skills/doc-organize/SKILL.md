@@ -42,14 +42,14 @@ Deterministic pipeline: read content → classify → rename → move → manife
 
 ## Input Contract
 
-```
+```text
 $SOURCE_DIR/
   **/*    — any document files (PDF, DOCX, TXT, images, etc.)
 ```
 
 ## Output Contract
 
-```
+```text
 $OUTPUT_DIR/
   invoices/        — invoice documents
   receipts/        — receipt documents

@@ -43,14 +43,14 @@ Deterministic pipeline: read threads → categorize → draft → output review 
 
 ## Input Contract
 
-```
+```text
 $SOURCE_DIR/
   *.eml | *.mbox | *.json   — exported email files or mailbox dumps
 ```
 
 ## Output Contract
 
-```
+```text
 $OUTPUT_DIR/
   triage-summary.md     — full categorized list with response drafts
   urgent.md             — P1-only quick action list

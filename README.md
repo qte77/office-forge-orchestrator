@@ -34,7 +34,7 @@ Execution happens through Claude Code (or compatible agents). Office-forge sets 
 
 # Interactive: start CC in a project context with office skills loaded
 cd projects/client-acme/ && claude
-```
+```text
 
 ## Project Structure
 
@@ -46,7 +46,7 @@ office-forge/
 ├── mcp/                       # MCP server configs for business APIs
 ├── templates/                 # Project templates (new client, quarterly close, etc.)
 └── config/                    # Environment and credential setup
-```
+```bash
 
 ## Recurring Tasks (/loop)
 
@@ -79,7 +79,7 @@ Start a loop session in any project:
 cd projects/client-acme/ && claude
 # Then in CC:
 /loop 1h check correspondence/ for client messages and summarize action items
-```
+```bash
 
 ## Skills (Deterministic Workflows)
 

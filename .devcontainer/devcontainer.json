@@ -1,0 +1,17 @@
+{
+  "name": "office-forge",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code"
+      ],
+      "settings": {
+        "dotfiles.repository": "qte77/dotfiles",
+        "dotfiles.installCommand": "install.sh",
+        "dotfiles.targetPath": "~/dotfiles"
+      }
+    }
+  },
+  "onCreateCommand": "make setup_all"
+}

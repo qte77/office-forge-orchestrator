@@ -12,7 +12,7 @@ cp -r templates/client-engagement/ ~/office/client-acme/
 cp -r templates/quarterly-close/ ~/office/q1-2026-close/
 ```
 
-Then add the new project path to `projects.conf`.
+Then add the new project path to `config/projects.conf`.
 
 ## Available Templates
 

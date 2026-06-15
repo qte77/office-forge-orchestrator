@@ -3,7 +3,7 @@
 Pre-configured MCP server definitions for business APIs. Copy relevant configs to your Claude Code MCP settings or run:
 
 ```bash
-../scripts/mcp-setup.sh   # Interactive setup
+# See issue #11 for interactive setup (planned)
 ```
 
 ## Available Configs

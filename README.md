@@ -33,3 +33,4 @@ see `config/` for environment setup.
 - [Skills](.claude/skills/) — deterministic office workflows (invoice, contract, report)
 - [MCP servers](mcp/) — business API configs (accounting, CRM, email)
 - [Templates](templates/) — project scaffolds for common scenarios
+- [Business-process baseline](https://github.com/qte77/qte77/blob/main/docs/cto-handbook-mapping.md) — how the office-loop (business-process / IT) maps to the Startup CTO Handbook (estate-level note in qte77)

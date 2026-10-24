@@ -45,7 +45,7 @@ Pre-configured MCP server definitions for business APIs. Copy relevant configs t
 |--------|------|-----------------|
 | Office-Word-MCP-Server | None | No auth required. Source: [GongRzhe/Office-Word-MCP-Server](https://github.com/GongRzhe/Office-Word-MCP-Server) |
 | excel-mcp-server | None | `EXCEL_MCP_PAGING_CELLS_LIMIT` controls paging (default 4000). Source: [negokaz/excel-mcp-server](https://github.com/negokaz/excel-mcp-server) |
-| mcp-server-doccreator | None | Multi-format: PDF, DOCX, PPTX, XLSX. Source: [Git-Fg/mcp-server-doccreator](https://github.com/Git-Fg/mcp-server-doccreator) |
+| mcp-server-doccreator | None | Multi-format: PDF, DOCX, PPTX, XLSX. Source repo (`Git-Fg/mcp-server-doccreator`) and PyPI package not found as of 2026-10-24 — server may not install |
 
 ## Usage
 

@@ -12,8 +12,8 @@ cp -r templates/client-engagement/ ~/office/client-acme/
 # Add to office-forge projects registry
 echo "/home/user/office/client-acme" >> projects.conf
 
-# Start CC in the engagement context
-cd ~/office/client-acme/ && claude
+# Start CC in the engagement context, with the office-forge skills loaded
+cd ~/office/client-acme/ && claude --add-dir /path/to/office-forge-orchestrator
 ```
 
 ## Folder Structure
@@ -53,4 +53,5 @@ Once CC is open in this project, use `/loop` for automatic recurring tasks:
 2. Edit `CLAUDE.md` with client-specific context (name, contacts, scope)
 3. Configure `.mcp.json` with actual API credentials
 4. Add the project path to `projects.conf`
-5. `cd` into the project and run `claude`
+5. `cd` into the project and run `claude --add-dir /path/to/office-forge-orchestrator`
+   (or use `scripts/sessions.sh`, which passes it for you)

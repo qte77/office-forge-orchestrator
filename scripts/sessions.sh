@@ -6,6 +6,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "${SCRIPT_DIR}/load-projects.sh"
 
 SESSION_NAME="office-forge-orchestrator"
+# --add-dir makes the office-forge .claude/skills/ available in each project
+ORCH_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 if ! command -v tmux &>/dev/null; then
   echo "Error: tmux required for parallel sessions" >&2
@@ -31,10 +33,10 @@ for i in "${!PROJECTS[@]}"; do
 
   if [ "$window_idx" -eq 0 ]; then
     tmux rename-window -t "$SESSION_NAME:0" "$name"
-    tmux send-keys -t "$SESSION_NAME:0" "cd '$path' && claude" Enter
+    tmux send-keys -t "$SESSION_NAME:0" "cd '$path' && claude --add-dir '$ORCH_ROOT'" Enter
   else
     tmux new-window -t "$SESSION_NAME" -n "$name"
-    tmux send-keys -t "$SESSION_NAME:$window_idx" "cd '$path' && claude" Enter
+    tmux send-keys -t "$SESSION_NAME:$window_idx" "cd '$path' && claude --add-dir '$ORCH_ROOT'" Enter
   fi
 
   ((window_idx++))

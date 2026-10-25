@@ -19,7 +19,18 @@ sessions — one per project.
 ```
 
 Projects: edit `config/projects.conf`. Credentials:
-see `config/` for environment setup.
+copy `config/env.example`; its names match the `${VAR}` references in
+`mcp/*.json`.
+
+Both scripts start Claude with `--add-dir` pointing at this repo, so the
+[skills](.claude/skills/) load in every project. `run.sh` runs headless with
+`--permission-prompts none` and prints JSON (`.result`, `.is_error`,
+`.total_cost_usd`) on stdout:
+
+| Env var                        | Default       | Effect                    |
+|--------------------------------|---------------|---------------------------|
+| `OFFICE_FORGE_PERMISSION_MODE` | `acceptEdits` | `run.sh` permission mode  |
+| `OFFICE_FORGE_MAX_BUDGET_USD`  | `5`           | `run.sh` USD cap per task |
 
 <details>
   <summary>Workspace preview — orchestrator concept with parallel agent sessions</summary>

@@ -27,6 +27,20 @@ if [ ! -d "$PROJECT_PATH" ]; then
   exit 1
 fi
 
-echo "Running task in $(basename "$PROJECT_PATH"): $TASK"
+# Headless runs start in Manual mode, where every call needing approval is
+# denied, so set the mode explicitly. JSON output on stdout carries .result,
+# .is_error and .total_cost_usd for the caller; status messages go to stderr.
+# --add-dir loads the office-forge skills; its files stay read-only.
+ORCH_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+PERMISSION_MODE="${OFFICE_FORGE_PERMISSION_MODE:-acceptEdits}"
+MAX_BUDGET_USD="${OFFICE_FORGE_MAX_BUDGET_USD:-5}"
+
+echo "Running task in $(basename "$PROJECT_PATH"): $TASK" >&2
 cd "$PROJECT_PATH"
-claude -p "$TASK"
+claude -p "$TASK" \
+  --add-dir "$ORCH_ROOT" \
+  --disallowedTools "Edit(/${ORCH_ROOT}/**)" \
+  --permission-mode "$PERMISSION_MODE" \
+  --permission-prompts none \
+  --output-format json \
+  --max-budget-usd "$MAX_BUDGET_USD"

@@ -3,7 +3,7 @@
 
 Orchestrate parallel AI agents across office projects
 (invoices, contracts, reports, email) from a single
-workspace — the way [polyforge](https://github.com/qte77/polyforge) manages dev repos.
+workspace — the way [polyforge](https://github.com/qte77/polyforge-orchestrator) manages dev repos.
 
 **For** office workers and ops teams running Claude Code
 across multiple projects simultaneously.
@@ -41,7 +41,10 @@ Both scripts start Claude with `--add-dir` pointing at this repo, so the
 
 ## Docs
 
-- [Skills](.claude/skills/) — deterministic office workflows (invoice, contract, report)
+- [Skills](.claude/skills/) — deterministic office workflows: `doc-organize`,
+  `email-triage`, `invoice-processing` (a `financial-report` skill is planned,
+  [#6](https://github.com/qte77/office-forge-orchestrator/issues/6); contract
+  support is a `templates/client-engagement/contracts/` scaffold only, not a skill)
 - [MCP servers](mcp/) — business API configs (accounting, CRM, email)
 - [Templates](templates/) — project scaffolds for common scenarios
 - [Business-process baseline](https://github.com/qte77/qte77/blob/main/docs/cto-handbook-mapping.md) — how the office-loop (business-process / IT) maps to the Startup CTO Handbook (estate-level note in qte77)

@@ -18,7 +18,7 @@ Then add the new project path to `config/projects.conf`.
 
 | Template | Contents | Use Case |
 |----------|----------|----------|
-| `client-engagement/` | Contracts, invoices, correspondence, reports + CRM/accounting/documents MCP + CLAUDE.md | New client projects |
+| `client-engagement/` | Contracts, invoices, correspondence, reports + CRM/accounting/documents MCP + AGENTS.md | New client projects |
 | `quarterly-close/` | Financial folders + accounting MCP + report skill | Recurring financial close |
 | `hiring-pipeline/` | Candidates, offers, onboarding folders + HR skill | Open positions |
 
